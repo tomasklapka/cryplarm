@@ -22,7 +22,9 @@ block content
       input#alarmPrice.inputbox(name='price' type='text' size='7')
       input.button(type='submit')
       div#offers
-        span.offerLabel -
+        span.offerLabel &nbsp;
+        span.offer(onclick='adjust(-1)')
+          | -1
         span.offer(onclick='adjust(-10)')
           | -10
         span.offer(onclick='adjust(-50)')
@@ -35,7 +37,9 @@ block content
           | -1000
         br
         br
-        span.offerLabel +
+        span.offerLabel &nbsp;
+        span.offer(onclick='adjust(+1)')
+          | +1
         span.offer(onclick='adjust(+10)')
           | +10
         span.offer(onclick='adjust(+50)')
