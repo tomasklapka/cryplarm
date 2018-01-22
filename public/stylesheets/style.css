@@ -1,0 +1,64 @@
+body {
+  padding: 2em 4em;
+  font: 1em "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: black;
+  color: grey;
+}
+
+a {
+  color: red;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.button {
+  margin-left: 1em;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+#offers {
+  margin-top: 0.5em;
+}
+
+span.offer, span.offerLabel {
+  display: block;
+  float: left;
+  width: 4em;
+}
+
+span.offerLabel {
+  width: 2em;
+}
+
+input {
+  background-color: black;
+  color: grey;
+  border: 1px solid grey;
+  margin: 0;
+}
+
+#alarmPrice {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.inputbox {
+  text-align: right;
+  padding-right: 0.2em;
+}

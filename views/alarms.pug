@@ -1,0 +1,63 @@
+extends layout
+
+block content
+
+  ul#alarms_list_up
+    include alarms_list_up
+
+  h1#last_price #{ticker.last_price}
+
+  ul#alarms_list_down
+    include alarms_list_down
+
+  hr
+
+  div#addAlarmRollout
+    span(onclick='document.getElementById("addAlarm").style.display="block"; document.getElementById("addAlarmRollout").style.display="none"')
+      | ▷
+  div#addAlarm(style='display: none')
+    span(onclick='document.getElementById("addAlarm").style.display="none"; document.getElementById("addAlarmRollout").style.display="block"')
+      | ▽
+    form(action='add' method='get')
+      input#alarmPrice.inputbox(name='price' type='text' size='ý')
+      input.button(value='Přidat' type='submit')
+      div#offers
+        span.offerLabel -
+        span.offer(onclick='adjust(-10)')
+          | -10
+        span.offer(onclick='adjust(-50)')
+          | -50
+        span.offer(onclick='adjust(-100)')
+          | -100
+        span.offer(onclick='adjust(-500)')
+          | -500
+        span.offer(onclick='adjust(-1000)')
+          | -1000
+        br
+        br
+        span.offerLabel +
+        span.offer(onclick='adjust(+10)')
+          | +10
+        span.offer(onclick='adjust(+50)')
+          | +50
+        span.offer(onclick='adjust(+100)')
+          | +100
+        span.offer(onclick='adjust(+500)')
+          | +500
+        span.offer(onclick='adjust(+1000)')
+          | +1000
+        br
+        br
+        span.offerLabel ↑
+        each offer, i in offers
+          if offer === '|'
+            br
+            br
+            span.offerLabel ↓
+          else
+            span.offer(onclick='document.getElementById("alarmPrice").value="'+offer+'"')
+              | #{offer}
+            |
+            |
+        br
+        br

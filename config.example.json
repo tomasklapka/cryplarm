@@ -1,0 +1,23 @@
+{
+  "ticker": "https://api.bitfinex.com/v2/ticker/tBTCUSD",
+  "tickerInterval": 5000,
+  "port": 8042,
+  "morgan": "[:date[iso]] :remote-addr :status :method :url :res[content-length] bytes :response-time ms \":user-agent\" \":referrer\"",
+  "persist": "./data/alarms.json",
+  "transporter": {
+    "host": "<smtp.server>",
+    "port": 587,
+    "secure": false,
+    "auth": {
+      "user": "<user>",
+      "pass": "<pass>"
+    },
+    "tls": {
+        "rejectUnauthorized": false
+    }
+  },
+  "mail": {
+    "from": "<from>",
+    "to": "<to>"
+  }
+}

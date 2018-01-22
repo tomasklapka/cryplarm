@@ -1,0 +1,18 @@
+mixin alarmrow(alarm)
+  li.alarm
+    if alarm.triggered
+      a(href='remove/'+alarm.id) X
+    else
+      a(href='remove/'+alarm.id onclick="return window.confirm('opravdu odebrat alarm?')") X
+    |
+    | #{alarm.price}
+    |
+    if alarm.type === 'UP'
+      | ↑
+      |
+    if alarm.type === 'DOWN'
+      | ↓
+      |
+    if alarm.triggered
+      | *
+      |

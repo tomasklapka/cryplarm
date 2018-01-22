@@ -1,0 +1,5 @@
+include alarmrow
+
+each alarm, i in alarms
+  if alarm && alarm.price >= ticker.last_price
+    +alarmrow(alarm)
