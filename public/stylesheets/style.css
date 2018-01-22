@@ -1,6 +1,6 @@
 body {
-  padding: 2em 4em;
-  font: 1em "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0;
+  font: 3em "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: black;
   color: grey;
 }
@@ -14,6 +14,7 @@ a {
 ul {
   list-style-type: none;
   padding-left: 0;
+  margin: 0.1em 0;
 }
 
 .button {
@@ -33,17 +34,17 @@ ul {
 }
 
 #offers {
-  margin-top: 0.5em;
+  margin-top: 1em;
 }
 
 span.offer, span.offerLabel {
   display: block;
   float: left;
-  width: 4em;
+  width: 3em;
 }
 
 span.offerLabel {
-  width: 2em;
+  width: 1em;
 }
 
 input {
@@ -51,14 +52,26 @@ input {
   color: grey;
   border: 1px solid grey;
   margin: 0;
+  padding: 0.2em;
+  font-size: 1em;
 }
 
 #alarmPrice {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
 }
 
 .inputbox {
   text-align: right;
-  padding-right: 0.2em;
+  padding-right: 0.4em;
+}
+
+hr {
+  border: 0px;
+  height: 1px;
+  background: grey;
+}
+
+h1 {
+  margin: 0.1em 0;
 }

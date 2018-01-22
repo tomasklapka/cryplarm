@@ -3,7 +3,7 @@ mixin alarmrow(alarm)
     if alarm.triggered
       a(href='remove/'+alarm.id) X
     else
-      a(href='remove/'+alarm.id onclick="return window.confirm('opravdu odebrat alarm?')") X
+      a(href='remove/'+alarm.id onclick="return window.confirm('Are you sure you want to remove the alarm?')") X
     |
     | #{alarm.price}
     |
