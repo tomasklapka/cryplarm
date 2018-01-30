@@ -24,13 +24,11 @@ transporter.verify(function(error, success) {
 });
 
 function notify(msg) {
-  console.log('notify');
   console.log(msg);
   const options = config.mail;
   options.subject = msg;
   options.text = msg;
   transporter.sendMail(options, (err, info) => {
-    console.log('sent');
     if (err) {
       console.log(err);
     } else {
