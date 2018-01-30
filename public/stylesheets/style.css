@@ -37,6 +37,10 @@ ul {
   margin-top: 1em;
 }
 
+div.liveMode {
+  width: 5em;
+}
+
 span.offer, span.offerLabel {
   display: block;
   float: left;

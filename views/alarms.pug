@@ -19,24 +19,14 @@ block content
     span(onclick='document.getElementById("addAlarm").style.display="none"; document.getElementById("addAlarmRollout").style.display="block"')
       | ▽
     form(action='add' method='get')
+      div.liveMode
+        input#liveMode(type='checkbox' name='ticking')
+        |
+        | live updates
+      br
       input#alarmPrice.inputbox(name='price' type='text' size='7')
       input.button(type='submit')
       div#offers
-        span.offerLabel &nbsp;
-        span.offer(onclick='adjust(-1)')
-          | -1
-        span.offer(onclick='adjust(-10)')
-          | -10
-        span.offer(onclick='adjust(-50)')
-          | -50
-        span.offer(onclick='adjust(-100)')
-          | -100
-        span.offer(onclick='adjust(-500)')
-          | -500
-        span.offer(onclick='adjust(-1000)')
-          | -1000
-        br
-        br
         span.offerLabel &nbsp;
         span.offer(onclick='adjust(+1)')
           | +1
@@ -63,5 +53,20 @@ block content
               | #{offer}
             |
             |
+        br
+        br
+        span.offerLabel &nbsp;
+        span.offer(onclick='adjust(-1)')
+          | -1
+        span.offer(onclick='adjust(-10)')
+          | -10
+        span.offer(onclick='adjust(-50)')
+          | -50
+        span.offer(onclick='adjust(-100)')
+          | -100
+        span.offer(onclick='adjust(-500)')
+          | -500
+        span.offer(onclick='adjust(-1000)')
+          | -1000
         br
         br
